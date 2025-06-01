@@ -1,0 +1,38 @@
+h1{
+   background-color: crimson; 
+   text-align: center;
+   border-radius: 10px;
+}
+h3{
+    background-color: aquamarine;
+    line-height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: large;
+}
+table,th,td{
+
+    /* width: 700px;
+    height: 100px; */
+    /* background-color: bisque; */
+    /* border-collapse: collapse; */
+    text-align: center;
+}
+th,td{
+    border: 5px solid plum;
+    padding: 20px;
+}
+tr :nth-child(even){
+    background-color: lightcoral;
+}
+.days{
+    background-color: aquamarine;
+    font-size: larger;
+    font-weight: bold;
+}
+.friday{
+background-color: cadetblue;
+color: bisque;
+}
