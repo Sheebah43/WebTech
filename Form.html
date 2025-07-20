@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div{
+        width: 70%;
+        background-color: rgb(77, 56, 124);
+        margin: auto;
+        border: solid 5px rgb(99, 39, 78);
+        text-align: center;
+    }
+    .div1{
+        background-color: rgb(123, 182, 211);
+        color: #fff;
+        width: 85%;
+    }
+    .div2{
+        background-color: rgb(88, 136, 200);
+        color: #fff;
+        width: 70%;
+    }
+    .div3{
+        background-color: rgb(61, 152, 177);
+        color: #fff;
+        width: 55%;
+    }
+    .myclass{
+        background-color: rgb(29, 88, 131);
+    }
+    .myclass1{
+        color:rgb(255, 255, 255);
+    }
+    #myid1{
+        background-color: rgb(161, 123, 28);
+    }
+    #myid2{
+        background-color:rgb(143, 108, 13);
+    }
+    #myid3{
+        background-color: rgb(86, 59, 6);
+    }
+    #jump{
+        background-color: darkslateblue;
+        color: beige;
+    }
+    #info{
+        background-color:rgb(132, 121, 205) ;
+        color: #fff;
+        font-weight: bold;
+        font-size: larger;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#jump" style="color: antiquewhite;">Go to the end.</a>
+        <h1 style="background-color: rgb(119, 202, 229); color:aliceblue;">Demo for forms</h1>
+        <div class="div1">
+        <h2 class="myclass myclass1">Text type form</h2>
+        <form action="actionpage" autocomplete="on" method="get"><!--get se aapke variables url mei aayenge post se encrypted honge-->
+            <label for="firstname" id="myid1">Enter your first name:</label>
+            <input type="text" id="firstname" name="firstname" value="NO STUPID NAMES!"><br><br><!--using name attribute is important-->
+            <label for="lastname" id="myid2">Enter your last name:<span style="color: red;">*</span></label>
+            <input type="text" id="lastname" name="lastname" placeholder="Again, NO STUPID NAMES!" required><br><br><!--required doesn't work with value???????? Only placeholder????/-->
+            <label for="" id="myid3">Enter your email id:</label>
+            <input type="text" id="emailid" name="emailid" placeholder="No fakesies!!!!!!!!!!!!!!!!!!!"><br><br>
+            <label for="">When was the last time you visited the underworld:</label>
+            <input type="text" id="visitdate" name="visitdate" placeholder="I know your identity, NEXT!"><br><br>
+            <h3>Complete the following like your life depends on it: -</h3>
+            <label for="">Modu uri...</label>
+            <input type="text" id="lyrics" name="lyrics" placeholder="Hint: NO HINTS!"><br><br>
+            <label for="">Sa-Why sad?</label>
+            <input type="text" id="btob" name="btob" placeholder="Hint: how can u not know this">
+        </div><br>
+    <div class="div2">
+        <h2 class="myclass myclass1">Radio type form</h2><!--Only one Correct-->
+        <h3>Click the correct option for "wae wae wae..."</h3>
+    <input type="radio" id="lyrics" name="lyrics">
+        <label for="">ANI WAAAAEEEEE</label><br>
+        <input type="radio" id="lyrics" name="lyrics">
+        <label for="">WAE WAE WAE</label><br>
+        <h2 class="myclass myclass1">Checkbox typeform<h2><!--Multiple correct-->
+        <h3>Click the correct option for "Soobin Soobin..."</h3>
+        <input type="checkbox" id="cse" name="cse">
+        <label for="cse">you know</label><br>
+        <input type="checkbox" id="cse" name="cse">
+        <label for="cse">you know Soobin</label>
+        </div><br>
+    <div class="div3">
+        <h2 class="myclass myclass1">Dropdown Menu Type Form</h2>
+        <label for="fruits">Select a fruit u wanna throw atyour friends<br>Note: This is purely for research purposes ;)</label><br>
+        <select name="fruits" id="fruits" size="5">
+        <option value="Choose" selected>Choose</option>
+        <option value="Apple">Apple</option>
+        <option value="Kiwi">Kiwi</option>
+        <option value="Green mango">Green Mango </option><!--#sabha-->
+        <option value="Banana">Banana</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Watermelon">Watermelon</option>
+        </select>
+        </div><br>
+        <fillingarea name="info" id="info" rows="2" cols="40">Read carefully before you submit your form</fillingarea><br/><br/>
+        <input type="submit" value="Submit here"><br><!--Classwork-->
+        <button type="submit">Submit</button><br><br>
+        <p id="jump">You've reached the end of the page.</p>
+        </form>
+    </div>
+</body>
+</html>
