@@ -1,1 +1,1 @@
-The files for the course of Web Technology are in the master branch.
+This is for the practical evaluation in the Web Technology course during the Spring 2025 session.
