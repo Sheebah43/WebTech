@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(118, 29, 29);
+        }
+        th, td{
+            padding: 10px;
+        }
+
+        table{
+            background-color: rgb(227, 194, 151);
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 20px;
+            border-radius: 20px;
+        }
+        table, tr, td, th{
+            border: solid 2px;
+            text-align: center;
+            width: 720px;
+            height: 25px;
+
+        }
+        body{
+            margin: 20px;
+            background-color: rgba(175, 104, 104, 0.567);
+        }
+        tr:nth-child(even){
+            background-color: rgb(233, 136, 146);
+        }
+        caption{
+            color: #fff;
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experimenting with Tables</h1>
+    <table>
+        <caption><i>Caption: This is a horizontal table</i></caption>
+        <tr>
+            <th>Name</th>
+            <th>Place</th>
+            <th>Animal</th>
+            <th>Thing</th>
+        </tr>
+        <tr>
+            <td rowspan="2">John Kill</td>
+            <td>US</td>
+            <td>Seagull</td>
+            <td>Debt</td>
+        </tr>
+        <tr>
+            <td>Underworld</td>
+            <td>Bloodhound</td>
+            <td>Sheath</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Silence Sirens</td>
+            <td>Nowhere</td>
+            <td>Unicorn</td>
+            <td>Poison</td>
+        </tr>
+        <tr>
+            <td>Ocean</td>
+            <td>Mermaid</td>
+            <td>Voice</td>
+        </tr>
+    </table><br><br>
+    <table>
+        <caption><i>Caption: This is a vertical table</i></caption>
+        <tr>
+            <th>Name</th>
+            <td colspan="2">John Kill</td>
+            <td colspan="2">Silence Sirens</td>
+        </tr>
+        <tr>
+            <th>Place</th>
+            <td>US</td>
+            <td>Underworld</td>
+            <td>Nowhere</td>
+            <td>Ocean</td>
+        </tr>
+        <tr>
+            <th>Animal</th>
+            <td>Seagul</td>
+            <td>Bloodhound</td>
+            <td>Unicorn</td>
+            <td>Mermaid</td>
+        </tr>
+        <tr>
+            <th>Thing</th>
+            <td>Debt</td>
+            <td>Sheath</td>
+            <td>Poison</td>
+            <td>Voice</td>
+        </tr>
+    </table>
+</body>
+</html>

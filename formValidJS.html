@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- <form action="#actionPage" method="post">
+        <label for="userid">User ID</label>
+        <input type="text" id="userid" name="userid" placeholder="Enter your user ID">
+        <span id="useridError" class="error"></span><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <span id="passwordError" class="error"></span><br><br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+        <span id="emailError" class="error"></span><br><br>
+
+        <label for="phone">Phone No</label>
+        <input type="tel" id="phone" name="" placeholder="Enter your phone number">
+        <span id="phoneError" class="error"></span><br><br>
+
+        <input type="submit" value="Submit">
+    </form> -->
+    <form id="myForm" onsubmit="return validateForm()">
+  <label>User ID:</label>
+  <input type="text" id="userid"><br><br>
+
+  <label>Password:</label>
+  <input type="password" id="password"><br><br>
+
+  <label>Email:</label>
+  <input type="text" id="email"><br><br>
+
+  <label>Phone:</label>
+  <input type="text" id="phone"><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+  const userId = document.getElementById('userid').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  // User ID: 4–8 characters, letters or digits only
+  if (userId.length < 4 || userId.length > 8 || !isAlphaNumeric(userId)) {
+    alert("User ID must be 4–8 characters and contain only letters or digits.");
+    return false;
+  }
+
+  // Password: at least 8 characters, must include uppercase, lowercase, digit, and special character
+  if (
+    password.length < 8 ||
+    !hasUpperCase(password) ||
+    !hasLowerCase(password) ||
+    !hasDigit(password) ||
+    !hasSpecialChar(password)
+  ) {
+    alert("Password must be at least 8 characters and include uppercase, lowercase, digit, and special character.");
+    return false;
+  }
+
+  // Email: must include '@' and '.' after '@'
+  if (!email.includes('@') || email.indexOf('.') < email.indexOf('@') + 2) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  // Phone: must be 10 digits and all numeric
+  if (phone.length !== 10 || isNaN(phone)) {
+    alert("Phone number must be exactly 10 digits.");
+    return false;
+  }
+
+  alert("Form submitted successfully!");
+  return true;
+}
+
+// Helper functions
+function isAlphaNumeric(str) {
+  for (let char of str) {
+    if (!char.match(/[a-zA-Z0-9]/)) return false;
+  }
+  return true;
+}
+
+function hasUpperCase(str) {
+  return str.toLowerCase() !== str;
+}
+
+function hasLowerCase(str) {
+  return str.toUpperCase() !== str;
+}
+
+function hasDigit(str) {
+  return str.split('').some(char => !isNaN(char));
+}
+
+function hasSpecialChar(str) {
+  const specials = "!@#$%^&*";
+  return str.split('').some(char => specials.includes(char));
+}
+</script>
+
+    <!-- <script src="formValidJS.js"></script> -->
+</body>
+</html>

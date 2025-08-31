@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="formExam.html" method="get">
+        <div>
+            <!-- span is wrapping up the text -->
+            <label for="name">Name<span style="color: red;">*</span></label >
+            <!-- required will not work if value is used instead of placeholder -->
+        <input type="text" id="name" placeholder="Your username" required> 
+        </div><br>
+        <div>
+            <label for="email">Email<span style="color: red;">*</span></label>
+            <input type="email" id="email" placeholder="Your email" required>
+        </div><br>
+        <div>
+            <label for="Password">Password<span style="color: red;">*</span></label>
+        <input type="password" id="Password" placeholder="Your password" required>
+        </div><br>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="number" placeholder="Your age in months" min="120" max="7200" step="10">
+        </div><br>
+        <div>
+            <label for="date">Date of birth</label>
+            <input type="date" id="date" placeholder="Your DOB" max="2025-08-11">
+        </div>
+        <div>
+            <p>Alien?</p> <!--may check all cuz it's a checkbox-->
+            <label for="alien">Yes</label>
+            <input type="checkbox" id="alien">
+            <label for="alien">No</label>
+            <input type="checkbox" id="alien">
+        </div>
+        <div>
+            <p>Alien?</p> <!--checks all-- cuz the name has to be the same for all the options-->
+            <label for="alien">Yes</label>
+            <input type="radio" id="alien">
+            <label for="alien">No</label>
+            <input type="radio" id="alien">
+        </div><br>
+                <div>
+            <p>Extraterrestial?</p> <!--checks all-- cuz the name has to be the same for all the options-->
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="alien" value="isAlien"><!--need to have values to know the answers-->
+            <label for="no">No</label>
+            <input type="radio" id="no" name="alien" value="notAlien">
+        </div><br>
+        <div>
+            <label for="eyecolor">Eye color</label>
+            <select name="eyecolor" id="eyecolor">
+                <option label="Color"></option>
+                <option value="brown">Brown</option>
+                <option value="brown">Hazel</option>
+                <option value="brown">Green</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="info">Info</label>
+            <textarea id="info" name="info" rows="5" cols="32"></textarea>
+        </div><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <input type="submit" value="Submit here">
+    </form>
+</body>
+</html>
